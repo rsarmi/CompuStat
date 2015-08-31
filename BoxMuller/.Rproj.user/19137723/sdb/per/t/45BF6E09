@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\n\nshinyUI(fluidPage(\n\n  titlePanel(\"Simulacion Box-Muller\"),\n\n  # Sidebar with a slider input for number of bins\n  sidebarLayout(\n    sidebarPanel(\n      sliderInput(\"bins\",\n                  \"Numero de observaciones (por variable):\",\n                  min = 1,\n                  max = 50000,\n                  value = 100)\n    ),\n\n    mainPanel(\n      plotOutput(\"distPlot\")\n    )\n  )\n))\n",
+    "created" : 1440629848161.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4219669044",
+    "id" : "45BF6E09",
+    "lastKnownWriteTime" : 1440638697,
+    "path" : "~/Desktop/Maestría 2015/Estadística Computacional/CompuStat/BoxMuller/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "\nlibrary(shiny)\n\nshinyUI(fluidPage(\n  \n  titlePanel(\"Tarea 1\"),\n  \n  sidebarLayout(\n    sidebarPanel(\n      \n      sliderInput(\"numSim\",\n                  \"Nmero de simulaciones:\",\n                  min = 1,\n                  max = 100000,\n                  value = 100),\n      \n      sliderInput(\"lambda\",\n                  \"Lambda:\",\n                  min = 1,\n                  max = 100,\n                  value = 5),\n      numericInput(\"obs\", \"Observaciones a visualizar en la tabla:\", 10)\n      \n    ),\n    \n    mainPanel(\n      tabsetPanel(\n        tabPanel(\"Distribuciones\", plotOutput(\"distPlot\")), \n        tabPanel(\"Tabla\", tableOutput(\"view\"))\n      )\n    )\n  )\n))\n",
+    "created" : 1441057114613.000,
+    "dirty" : false,
+    "encoding" : "ASCII",
+    "folds" : "",
+    "hash" : "3209113580",
+    "id" : "CB96A04",
+    "lastKnownWriteTime" : 1441057152,
+    "path" : "~/Desktop/FuncionInversa/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

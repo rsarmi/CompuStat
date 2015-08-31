@@ -1,0 +1,16 @@
+{
+    "contents" : "\nlibrary(shiny)\nlibrary(ggplot2)\n\nshinyServer(function(input, output) {\n  \n  \n  \n  \n  #Hacer la grafica de 2 distribuciones\n  output$view <- renderTable({\n    u<-runif(input$numSim)\n    x<- (1/input$lambda) * log(1/(1-u))\n    x<-as.data.frame(x)\n    x$Rexp<- rexp(input$numSim,input$lambda)\n    head(x, n = input$obs)\n  })  \n  output$distPlot <- renderPlot({\n    u<-runif(input$numSim)\n    x<- (1/input$lambda) * log(1/(1-u))\n    x<-as.data.frame(x)\n    x$Rexp<- rexp(input$numSim,input$lambda)\n    ggplot(x) + geom_density(aes(x=x), colour=\"red\", fill=\"white\") + geom_density(aes(x=Rexp), alpha=.15, fill=\"blue\")\n    \n    \n    \n  })\n  \n})\n",
+    "created" : 1441057114813.000,
+    "dirty" : false,
+    "encoding" : "ASCII",
+    "folds" : "",
+    "hash" : "566016841",
+    "id" : "5CCCA570",
+    "lastKnownWriteTime" : 1441057170,
+    "path" : "~/Desktop/FuncionInversa/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
